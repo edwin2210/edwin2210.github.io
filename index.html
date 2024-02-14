@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo de San Valentín </title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Incluye la biblioteca Swiper.js -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+   
+        
+        
+        
+</head>
+<body>
+    <div id="heart-container"></div>
+
+    <script src="script.js"></script>
+    <audio controls autoplay loop>
+        <source src="close_to_you.mp3" type="audio/mpeg">
+        
+      </audio>
+      
+    <header>
+        <div class="container">
+            <img src="gatito_derecha.png" alt="Gatito derecha" class="gatito">
+            <h1>¡Feliz San Valentín Jessica!</h1>
+            <img src="gatito_izquierda.png" alt="Gatito izquierda" class="gatito">
+        </div>
+        
+        
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre nosotros</a></li>
+                <li><a href="#photos">Nuestros recuerdos</a></li>
+                <li><a href="#letter">Querida Jessica</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    
+    <main>
+        <div class="encabezado">
+            <section id="about">
+                <h2>Sobre nosotros</h2>
+                <h3>¡Como comenzó nuestra historia! Todo empezó en la salida de la escuela, un día como cualquier otro, pero que se convertiría en el comienzo de algo maravilloso. Jessica y yo nos conocimos al salir del ittol. Recuerdo ese momento como si fuera ayer: la vi por primera vez del otro lado de la calle mientras ella salía de la escuela.
+                    Antes de ese encuentro, ya habíamos tenido algunas conversaciones por teléfono, pero nunca nos habíamos conocido en persona. Sin embargo, cuando la vi cruzar la calle, algo cambió dentro de mí. Había una energía especial en el aire, como si el universo estuviera conspirando para unirnos.    
+                    Desde el momento en que nos encontramos frente a frente, supe que había algo especial en Jessica. Sus ojos brillaban con una luz única y su sonrisa iluminaba todo a su alrededor. Había una conexión instantánea entre nosotros, como si nos conociéramos desde siempre.                    
+                    A partir de ese día, nuestra amistad floreció y nuestro vínculo se hizo más fuerte con cada conversación y cada momento compartido. Descubrimos que teníamos mucho en común, desde nuestros intereses hasta nuestras aspiraciones para el futuro. Pasábamos horas hablando, riendo y soñando juntos, y cada momento era mágico.                  
+                    Aunque han pasado 2 años desde aquel primer encuentro en la salida de la escuela, el recuerdo de ese día sigue siendo uno de los más preciados en nuestra historia. Fue el comienzo de un viaje increíble juntos, lleno de amor, risas y aventuras.
+                </h3>
+            </section>
+        </div>
+        <section id="photos">
+            <h2>Nuestros recuerdos</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="foto1.jpg" alt="Foto 1"></div>
+                    <div class="swiper-slide"><img src="foto2.jpg" alt="Foto 2"></div>
+                    <div class="swiper-slide"><img src="foto3.jpg" alt="Foto 2"></div>
+                    <div class="swiper-slide"><img src="foto4.jpg" alt="Foto 2"></div>
+                    <div class="swiper-slide"><img src="foto5.jpg" alt="Foto 2"></div>
+                   
+                </div>
+                <!-- Agrega la paginación del carrusel -->
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+        </section>
+        
+        <section id="letter">
+            <h2>Querida Jessica</h2>
+            <p>En estos tiempos difíciles, quiero tomarme un momento para recordarte lo mucho que significas para mí. A medida que enfrentamos los desafíos de la vida juntos, quiero que sepas que no estás sola. Cada obstáculo que encontramos solo nos hace más fuertes, y sé que juntos podemos superar cualquier adversidad.
+
+                Imaginarme un futuro contigo es lo que me da fuerzas en los momentos más difíciles. Sueño con una vida llena de amor, risas y aventuras, construyendo una familia juntos y viendo crecer nuestros sueños. A pesar de las dificultades que enfrentamos, sé en lo más profundo de mi corazón que nuestro amor es más fuerte que cualquier desafío que se nos presente.
+                
+                Cada día a tu lado es un recordatorio de lo afortunado que soy de tenerte en mi vida. Tu fuerza, tu valentía y tu amor incondicional son un regalo que no tomo a la ligera. Eres mi roca, mi apoyo y mi mayor inspiración. No hay nada que desee más que verte alcanzar todas tus metas y sueños, y estoy aquí para apoyarte en cada paso del camino.
+                
+                Sé que la vida puede ser difícil a veces, pero también sé que lo mejor de la vida es estar contigo. Juntos, podemos enfrentar cualquier desafío y convertirlo en una oportunidad para crecer y aprender. Eres mi luz en la oscuridad, mi esperanza en tiempos difíciles, y estoy eternamente agradecido por tenerte a mi lado.
+                
+                Con todo mi amor y mi gratitud,</p>
+            <h2>Edwin</h2>
+        </section>
+    </main>
+    <footer>
+        <p>te amo bb</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const heartContainer = document.getElementById("heart-container");
+            const bigHeart = document.createElement("img");
+
+    bigHeart.src = "corazon2.png";
+    bigHeart.classList.add("big-heart");
+
+    function generateHearts() {
+        for (let i = 0; i < 500; i++) {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * window.innerWidth + "px";
+            heart.style.top = Math.random() * window.innerHeight + "px";
+            heartContainer.appendChild(heart);
+        }
+    }
+
+    function showBigHeart(event) {
+        const x = event.clientX;
+        const y = event.clientY;
+
+        bigHeart.style.left = x - bigHeart.width / 2 + "px";
+        bigHeart.style.top = y - bigHeart.height / 2 + "px";
+
+        document.body.appendChild(bigHeart);
+
+        setTimeout(() => {
+            document.body.removeChild(bigHeart);
+        }, 5000);
+    }
+
+    heartContainer.addEventListener("click", showBigHeart);
+
+    generateHearts();
+
+            var sections = document.querySelectorAll("section");
+        
+            function checkVisibility() {
+                var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        
+                sections.forEach(function(section) {
+                    var bounding = section.getBoundingClientRect();
+                    var isVisible = (
+                        bounding.top >= 0 &&
+                        bounding.bottom <= windowHeight
+                    );
+        
+                    if (isVisible && !section.classList.contains("show")) {
+                        section.classList.add("show");
+                    }
+                });
+            }
+        
+            function handleScroll() {
+                checkVisibility();
+            }
+        
+            window.addEventListener("scroll", handleScroll);
+            window.addEventListener("touchmove", handleScroll); // Agregar evento touchmove para dispositivos táctiles
+        
+            // Llamar a checkVisibility una vez para mostrar las secciones visibles inicialmente
+            checkVisibility();
+        });
+        var swiper = new Swiper('.swiper-container', {
+        // Opciones del carrusel
+        loop: true, // Repetir el carrusel
+        pagination: {
+            el: '.swiper-pagination', // Selector para la paginación
+            clickable: true, // Permite hacer clic en los puntos de paginación para navegar
+        },
+    });
+        </script>
+</body>
+</html>

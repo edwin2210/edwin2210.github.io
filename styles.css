@@ -1,0 +1,231 @@
+/* Estilo de fondo */
+body {
+    background-color: #f3e5f5; /* Morado claro */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo de encabezado */
+header {
+    background-color: #9c27b0; /* Morado intenso */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+header h1 {
+    display: inline-block; /* Permite que el título se comporte como un bloque en línea */
+    position: relative; /* Posición relativa para que los gatitos se posicionen relativos al título */
+    vertical-align: middle; /* Alinea verticalmente el título con los gatitos */
+}
+/* Estilo de encabezado */
+h1 {
+    font-family: 'Roboto Thin', sans-serif; /* Utilizamos la fuente Roboto Thin */
+    font-weight: 100;
+    color: #ffffff; /* Color morado */
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+
+/* Estilo de fuente */
+h2 {
+    font-family: 'Roboto Thin', sans-serif;
+    font-weight: 100;
+}
+
+/* Estilo de contenedores */
+section {
+    background-color: #fff; /* Blanco */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo de imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo de botón */
+button {
+    background-color: #9c27b0; /* Morado intenso */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7b1fa2; /* Morado más oscuro al pasar el ratón */
+}
+
+/* Estilo de enlace */
+a {
+    color: #9c27b0; /* Morado intenso */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #7b1fa2; /* Morado más oscuro al pasar el ratón */
+}
+
+/* Estilo de contenedores */
+section {
+    background-color: #fff; /* Blanco */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.5s ease; /* Transición suave */
+}
+/* Estilo de contenedores cuando se muestran */
+section.show {
+    opacity: 1;
+}
+
+/* Estilo para los gatitos */
+/* Estilo para los gatitos */
+.gatito {
+    width: 10%; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    position: sticky; /* Coloca los gatitos de forma absoluta */
+    top: 50px; /* Posición verticalmente en el medio */
+     /* Ajusta la posición vertical */
+}
+
+.container {
+    display: flex; /* Utiliza flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+/* Estilo para pantallas grandes */
+.swiper-slide img {
+    max-width: 20%; /* Establece el ancho máximo al 100% del contenedor */
+    height: auto; 
+    border: 5px solid#b53cb9; /* Ajusta el ancho y color del borde según lo desees */
+    border-radius: 10px; /* Agrega esquinas redondeadas al borde */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*/* Permite que la altura se ajuste automáticamente según el ancho */
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .swiper-slide img {
+        max-width: 200px; /* Establece el ancho máximo al 80% del contenedor en pantallas pequeñas */
+        height: auto; 
+        border: 5px solid #b53cb9; /* Ajusta el ancho y color del borde según lo desees */
+        border-radius: 10px; /* Agrega esquinas redondeadas al borde */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*/* Permite que la altura se ajuste automáticamente según el ancho */
+    }
+}
+
+#letter {
+    background-color: #f9f9f9; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#letter h2 {
+    font-size: 24px; /* Tamaño de fuente para el remitente */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+#letter p {
+    font-size: 18px; /* Tamaño de fuente para el contenido */
+    line-height: 1.5; /* Espaciado entre líneas */
+    color: #444; /* Color de texto */
+}
+#letter::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #ff80ab; /* Color de acento */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+/* Estilos para los corazones */
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('corazon.png');
+    background-size: cover;
+    z-index: 1;
+    animation: falling 20s linear infinite; /* Animación para la lluvia de corazones */
+}
+
+/* Animación para la lluvia de corazones */
+@keyframes falling {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+.big-heart {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Ajusta el z-index para que esté encima de todo */
+}
+
+#letter::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #ff80ab; /* Color de acento */
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+/* Estilo para el título */
+header h1 {
+    display: inline-block; /* Permite que el título se comporte como un bloque en línea */
+    position: relative; /* Posición relativa para que los gatitos se posicionen relativos al título */
+    vertical-align: middle; /* Alinea verticalmente el título con los gatitos */
+}
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0; /* Elimina el relleno predeterminado */
+    text-align: center; /* Centra los elementos de la lista */
+}
+
+nav li {
+    display: inline-block; /* Muestra los elementos de la lista en línea */
+    margin: 0 10px; /* Espacio entre los elementos de la lista */
+}
+
+
+
+nav a:hover {
+    background-color: #f0f0f0; /* Cambia el color de fondo al pasar el ratón */
+}
+
+nav a {
+    text-decoration: none; /* Quita la subrayado de los enlaces */
+    color: #333; /* Color del texto */
+    font-family: Pacifico; /* Cambia la tipografía a una cursiva */
+    font-size: 20px; /* Tamaño de letra más grande */
+    padding: 5px 10px; /* Relleno para los enlaces */
+    border-radius: 5px; /* Borde redondeado */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+}
+
+
+
